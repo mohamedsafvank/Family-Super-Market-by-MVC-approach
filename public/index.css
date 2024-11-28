@@ -1,0 +1,387 @@
+/* Basic styling */
+body {
+    background: linear-gradient(to bottom, rgb(84, 24, 76), rgb(211, 107, 178) 50%, rgb(81, 15, 69));
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    padding: 30px;
+}
+.heading{
+    position: absolute; left: 50%; transform: translateX(-50%); z-index: 2;padding: 10px 0px 15px 250px;font-weight: 400;background-color:  rgb(84, 24, 76);color: azure; width: 100%;font-size: 24px;
+}
+
+/* Form container on the left side */
+.form-container {
+    width: 20%;
+    background-color: rgb(84, 24, 76);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 0px 0px 10px ;
+    
+}
+select {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+
+/* Hover effect for select field */
+select:hover {
+    background-color: #eaeaea;
+    border-color: #bbb;
+}
+
+/* Form inputs */
+.form-container input, .form-container button {
+    margin-top: 15px !important;
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    margin: auto;
+    transition: all 0.3s ease;
+}
+input::placeholder {
+    font-size: 14px; /* Set your desired font size */
+    color: gray; /* Optional: Change the placeholder text color */
+  }
+
+/* Hover effect for input fields */
+.form-container input:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+/* Button styling */
+.form-container button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: rgb(254, 254, 254);
+    width: 50%;
+    margin: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for button */
+.form-container button:hover {
+    background-color: #ffffff !important;
+    color: rgb(121, 117, 117) !important;
+    border: none;
+}
+
+/* Label styling */
+label {
+    display: block;
+    color: #f1f1f1;
+}
+
+#stockForm {
+    margin-top: 57px;
+}
+#stockTable{
+    margin-top: 50px;
+}
+
+/* Table container on the right side */
+.table-container {
+    flex-grow: 1;
+    background-color: #f9f9f9;
+    overflow-x: auto;
+    border-radius: 0px 10px 10px 0px;
+    position: relative;
+}
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+/* Highlight row on hover */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    display: none;
+}
+
+.toast-success {
+    background-color: green;
+}
+
+.toast-error {
+    background-color: red;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+}
+.fa-trash{
+    color: red;
+    cursor: pointer;
+}
+.fa-pen-to-square{
+   color: green;
+   cursor: pointer;
+}
+/* Modal background */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content box */
+.modal-content {
+    background: linear-gradient(to bottom, rgb(84, 24, 76), rgb(211, 107, 178) 50%, rgb(81, 15, 69));
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+/* Modal heading */
+#confirmationMessage {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+/* Button container */
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Button styles */
+.btn-confirm, .btn-cancel {
+    padding: 6px 25px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Confirm button styles */
+.btn-confirm {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-confirm:hover {
+    background-color: #45a049;
+}
+
+/* Cancel button styles */
+.btn-cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #e53935;
+}
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-confirm {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .form-container {
+        width: 30%;
+    }
+
+    .table-container {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form-container {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    .table-container {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    table th, table td {
+        font-size: 14px; /* Reduce text size */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    .form-container input, 
+    .form-container button, 
+    .form-container select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .heading {
+        position: relative;
+        left: 0;
+        transform: none;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 20px;
+        background-color: rgb(84, 24, 76);
+        color: azure;
+        width: 100%;
+    }
+}
+
+/* Further responsiveness for smaller devices */
+@media screen and (max-width: 640px) {
+    .form-container {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+
+    .form-container input,
+    .form-container button,
+    .form-container select {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .table-container {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* Smallest screen adjustments (e.g., phones) */
+@media screen and (max-width: 480px) {
+    body {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    .form-container input,
+    .form-container select {
+        width: 90%;
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    table th, table td {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    .modal-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .heading {
+        font-size: 18px;
+        padding: 8px 0;
+    }
+}
